@@ -6,6 +6,8 @@ contract CivilDiscourse {
         address owner;
     }
 
+    event StatementAdded(address by, string text);
+
     Statement[] public statements;   
 
     function AddStatement(string text) public {
@@ -13,6 +15,7 @@ contract CivilDiscourse {
            owner: msg.sender,
            text: text
        }));
+       StatementAdded(msg.sender, text);
     }
 }
 
