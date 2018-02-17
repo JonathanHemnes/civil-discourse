@@ -11,9 +11,7 @@ const contractOptions = {
 }
 const MyContract = new web3.eth.Contract(CivilDiscourseABI.abi, CivilDiscourseABI.networks['5777'].address);
 
-debugger;
 function addStatement(statement) {
-    debugger;
   MyContract.methods
     .AddStatement(statement)
     .send(contractOptions)
@@ -23,8 +21,9 @@ function addStatement(statement) {
 }
 
 async function getStatements() {
-  const result = await MyContract.methods.statements(contractOptions.from);
+  const result = await MyContract.methods.GetStatements().call();
 
+    debugger;
   return result;
 }
 

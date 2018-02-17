@@ -8,9 +8,10 @@ import router from './router';
 import Contract from './helpers/Contract';
 
 
-Contract.getStatements();
+const result = Contract.getStatements();
 
-console.log(Contract.getStatements());
+console.log('hello');
+console.log(result);
 
 Vue.config.productionTip = false
 
