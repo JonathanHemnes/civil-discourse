@@ -17,5 +17,9 @@ contract CivilDiscourse {
        }));
        StatementAdded(msg.sender, text);
     }
+
+    function GetStatements() public view returns (Statement[]) {
+        return statements;
+    }
 }
 
