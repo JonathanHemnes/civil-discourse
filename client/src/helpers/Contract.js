@@ -13,6 +13,7 @@ const MyContract = new web3.eth.Contract(CivilDiscourseABI.abi, CivilDiscourseAB
 
 debugger;
 function addStatement(statement) {
+    debugger;
   MyContract.methods
     .AddStatement(statement)
     .send(contractOptions)

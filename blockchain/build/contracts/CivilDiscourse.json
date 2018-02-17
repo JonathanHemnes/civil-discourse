@@ -2,29 +2,6 @@
   "contractName": "CivilDiscourse",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "statements",
-      "outputs": [
-        {
-          "name": "text",
-          "type": "string"
-        },
-        {
-          "name": "owner",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "anonymous": false,
       "inputs": [
         {
@@ -50,7 +27,12 @@
         }
       ],
       "name": "AddStatement",
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
@@ -63,16 +45,26 @@
         {
           "components": [
             {
-              "name": "text",
-              "type": "string"
-            },
-            {
-              "name": "owner",
-              "type": "address"
+              "components": [
+                {
+                  "name": "text",
+                  "type": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address"
+                },
+                {
+                  "name": "id",
+                  "type": "uint256"
+                }
+              ],
+              "name": "statements",
+              "type": "tuple[]"
             }
           ],
           "name": "",
-          "type": "tuple[]"
+          "type": "tuple"
         }
       ],
       "payable": false,
@@ -80,18 +72,27 @@
       "type": "function"
     }
   ],
+<<<<<<< Updated upstream
   "bytecode": "0x6060604052341561000f57600080fd5b6106fc8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633d7f3fef1461005c578063ac3f58a8146100b9578063e7227170146101a5575b600080fd5b341561006757600080fd5b6100b7600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061020a565b005b34156100c457600080fd5b6100da6004808035906020019091905050610398565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281038252848181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101955780601f1061016a57610100808354040283529160200191610195565b820191906000526020600020905b81548152906001019060200180831161017857829003601f168201915b5050935050505060405180910390f35b34156101b057600080fd5b6101b86103ea565b60405180806020018281038252838181518152602001915080516000925b818410156101f957828490602001906020020151815260200192600101926101d6565b925050509250505060405180910390f35b6000805480600101828161021e9190610547565b9160005260206000209060020201600060408051908101604052808581526020013373ffffffffffffffffffffffffffffffffffffffff168152509091909150600082015181600001908051906020019061027a929190610579565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050507f2cf6827452e40312742663eb6721abed4bfd170aaf5804d833f19884d78efef83382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561035a57808201518184015260208101905061033f565b50505050905090810190601f1680156103875780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150565b6000818154811015156103a757fe5b906000526020600020906002020160009150905080600001908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b6103f26105f9565b6000805480602002602001604051908101604052809291908181526020016000905b8282101561053e5783829060005260206000209060020201604080519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104d05780601f106104a5576101008083540402835291602001916104d0565b820191906000526020600020905b8154815290600101906020018083116104b357829003601f168201915b505050505081526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152505081526020019060010190610414565b50505050905090565b81548183558181151161057457600202816002028360005260206000209182019101610573919061060d565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105ba57805160ff19168380011785556105e8565b828001600101855582156105e8579182015b828111156105e75782518255916020019190600101906105cc565b5b5090506105f59190610663565b5090565b602060405190810160405280600081525090565b61066091905b8082111561065c576000808201600061062c9190610688565b6001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600201610613565b5090565b90565b61068591905b80821115610681576000816000905550600101610669565b5090565b90565b50805460018160011615610100020316600290046000825580601f106106ae57506106cd565b601f0160209004906000526020600020908101906106cc9190610663565b5b505600a165627a7a72305820499c4dfa9979ae949a4953c16512002c0665c8b3e37cd78b5eb681e11f35794b0029",
   "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633d7f3fef1461005c578063ac3f58a8146100b9578063e7227170146101a5575b600080fd5b341561006757600080fd5b6100b7600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061020a565b005b34156100c457600080fd5b6100da6004808035906020019091905050610398565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281038252848181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101955780601f1061016a57610100808354040283529160200191610195565b820191906000526020600020905b81548152906001019060200180831161017857829003601f168201915b5050935050505060405180910390f35b34156101b057600080fd5b6101b86103ea565b60405180806020018281038252838181518152602001915080516000925b818410156101f957828490602001906020020151815260200192600101926101d6565b925050509250505060405180910390f35b6000805480600101828161021e9190610547565b9160005260206000209060020201600060408051908101604052808581526020013373ffffffffffffffffffffffffffffffffffffffff168152509091909150600082015181600001908051906020019061027a929190610579565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050507f2cf6827452e40312742663eb6721abed4bfd170aaf5804d833f19884d78efef83382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561035a57808201518184015260208101905061033f565b50505050905090810190601f1680156103875780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150565b6000818154811015156103a757fe5b906000526020600020906002020160009150905080600001908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b6103f26105f9565b6000805480602002602001604051908101604052809291908181526020016000905b8282101561053e5783829060005260206000209060020201604080519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104d05780601f106104a5576101008083540402835291602001916104d0565b820191906000526020600020905b8154815290600101906020018083116104b357829003601f168201915b505050505081526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152505081526020019060010190610414565b50505050905090565b81548183558181151161057457600202816002028360005260206000209182019101610573919061060d565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105ba57805160ff19168380011785556105e8565b828001600101855582156105e8579182015b828111156105e75782518255916020019190600101906105cc565b5b5090506105f59190610663565b5090565b602060405190810160405280600081525090565b61066091905b8082111561065c576000808201600061062c9190610688565b6001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600201610613565b5090565b90565b61068591905b80821115610681576000816000905550600101610669565b5090565b90565b50805460018160011615610100020316600290046000825580601f106106ae57506106cd565b601f0160209004906000526020600020908101906106cc9190610663565b5b505600a165627a7a72305820499c4dfa9979ae949a4953c16512002c0665c8b3e37cd78b5eb681e11f35794b0029",
   "sourceMap": "26:485:0:-;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "26:485:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;221:189;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;182:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;416:93;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;221:189;272:10;:90;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;288:73;;;;;;;;;347:4;288:73;;;;318:10;288:73;;;;;272:90;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;371:32;386:10;398:4;371:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;221:189:0;:::o;182:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;416:93::-;462:11;;:::i;:::-;492:10;485:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;416:93;:::o;26:485::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o",
   "source": "pragma solidity ^0.4.18;\n\ncontract CivilDiscourse {\n    struct Statement {\n        string text;\n        address owner;\n    }\n\n    event StatementAdded(address by, string text);\n\n    Statement[] public statements;   \n\n    function AddStatement(string text) public {\n       statements.push(Statement({\n           owner: msg.sender,\n           text: text\n       }));\n       StatementAdded(msg.sender, text);\n    }\n\n    function GetStatements() public view returns (Statement[]) {\n        return statements;\n    }\n}\n\n",
   "sourcePath": "/Users/dan/Desktop/civil-discourse/blockchain/contracts/CivilDiscourse.sol",
+=======
+  "bytecode": "0x6060604052341561000f57600080fd5b6106538061001e6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633d7f3fef14610051578063e7227170146100c2575b600080fd5b341561005c57600080fd5b6100ac600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100eb565b6040518082815260200191505060405180910390f35b34156100cd57600080fd5b6100d56102ad565b6040518082815260200191505060405180910390f35b60006100f561042a565b6060604051908101604052808481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001600160008001805490500181525090506000800180548060010182816101499190610468565b91600052602060002090600302016000839091909150600082015181600001908051906020019061017b92919061049a565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604082015181600201555050507f2cf6827452e40312742663eb6721abed4bfd170aaf5804d833f19884d78efef83384604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561026557808201518184015260208101905061024a565b50505050905090810190601f1680156102925780820380516001836020036101000a031916815260200191505b50935050505060405180910390a18060400151915050919050565b6102b561051a565b60006020604051908101604052908160008201805480602002602001604051908101604052809291908181526020016000905b8282101561041d578382906000526020600020906003020160606040519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a55780601f1061037a576101008083540402835291602001916103a5565b820191906000526020600020905b81548152906001019060200180831161038857829003601f168201915b505050505081526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001600282015481525050815260200190600101906102e8565b5050505081525050905090565b60606040519081016040528061043e610534565b8152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600081525090565b815481835581811511610495576003028160030283600052602060002091820191016104949190610548565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104db57805160ff1916838001178555610509565b82800160010185558215610509579182015b828111156105085782518255916020019190600101906104ed565b5b50905061051691906105a6565b5090565b60206040519081016040528061052e6105cb565b81525090565b602060405190810160405280600081525090565b6105a391905b8082111561059f576000808201600061056791906105df565b6001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905560028201600090555060030161054e565b5090565b90565b6105c891905b808211156105c45760008160009055506001016105ac565b5090565b90565b602060405190810160405280600081525090565b50805460018160011615610100020316600290046000825580601f106106055750610624565b601f01602090049060005260206000209081019061062391906105a6565b5b505600a165627a7a72305820bcddf756ce499b21634b4c94e91d2c284feae74aa76341f66d7fdad40c244df10029",
+  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633d7f3fef14610051578063e7227170146100c2575b600080fd5b341561005c57600080fd5b6100ac600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100eb565b6040518082815260200191505060405180910390f35b34156100cd57600080fd5b6100d56102ad565b6040518082815260200191505060405180910390f35b60006100f561042a565b6060604051908101604052808481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001600160008001805490500181525090506000800180548060010182816101499190610468565b91600052602060002090600302016000839091909150600082015181600001908051906020019061017b92919061049a565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604082015181600201555050507f2cf6827452e40312742663eb6721abed4bfd170aaf5804d833f19884d78efef83384604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561026557808201518184015260208101905061024a565b50505050905090810190601f1680156102925780820380516001836020036101000a031916815260200191505b50935050505060405180910390a18060400151915050919050565b6102b561051a565b60006020604051908101604052908160008201805480602002602001604051908101604052809291908181526020016000905b8282101561041d578382906000526020600020906003020160606040519081016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a55780601f1061037a576101008083540402835291602001916103a5565b820191906000526020600020905b81548152906001019060200180831161038857829003601f168201915b505050505081526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001600282015481525050815260200190600101906102e8565b5050505081525050905090565b60606040519081016040528061043e610534565b8152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001600081525090565b815481835581811511610495576003028160030283600052602060002091820191016104949190610548565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104db57805160ff1916838001178555610509565b82800160010185558215610509579182015b828111156105085782518255916020019190600101906104ed565b5b50905061051691906105a6565b5090565b60206040519081016040528061052e6105cb565b81525090565b602060405190810160405280600081525090565b6105a391905b8082111561059f576000808201600061056791906105df565b6001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905560028201600090555060030161054e565b5090565b90565b6105c891905b808211156105c45760008160009055506001016105ac565b5090565b90565b602060405190810160405280600081525090565b50805460018160011615610100020316600290046000825580601f106106055750610624565b601f01602090049060005260206000209081019061062391906105a6565b5b505600a165627a7a72305820bcddf756ce499b21634b4c94e91d2c284feae74aa76341f66d7fdad40c244df10029",
+  "sourceMap": "26:696:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:696:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;298:317;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;621:98;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;298:317;349:4;364:8;;:::i;:::-;375:125;;;;;;;;;434:4;375:125;;;;405:10;375:125;;;;;;489:1;455:13;:24;;:31;;;;:35;375:125;;;364:136;;509:13;:24;;:35;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;539:4;509:35;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;553:32;568:10;580:4;553:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;601:4:0;:7;;;594:14;;298:317;;;;:::o;621:98::-;667:13;;:::i;:::-;699;692:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;621:98;:::o;26:696::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o",
+  "source": "pragma solidity ^0.4.19;\n\ncontract CivilDiscourse {\n    struct AllStatements {\n        Statement[] statements;\n    }\n    struct Statement {\n        string text;\n        address owner;\n        uint id;\n    }\n\n    event StatementAdded(address by, string text);\n\n    AllStatements allStatements;\n\n    function AddStatement(string text) public returns (uint){\n        var stmt = Statement({\n           owner: msg.sender,\n           text: text,\n           id: allStatements.statements.length + 1\n       });\n       allStatements.statements.push(stmt);\n       StatementAdded(msg.sender, text);\n       return stmt.id;\n    }\n\n    function GetStatements() public view returns (AllStatements) {\n        return allStatements;\n    }\n\n}\n\n",
+  "sourcePath": "/Users/jonathanhemnes/git/civil-discourse/blockchain/contracts/CivilDiscourse.sol",
+>>>>>>> Stashed changes
   "ast": {
     "attributes": {
       "absolutePath": "/Users/dan/Desktop/civil-discourse/blockchain/contracts/CivilDiscourse.sol",
       "exportedSymbols": {
         "CivilDiscourse": [
-          47
+          66
         ]
       }
     },
@@ -102,7 +103,7 @@
             "solidity",
             "^",
             "0.4",
-            ".18"
+            ".19"
           ]
         },
         "id": 1,
@@ -121,17 +122,69 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            47
+            66
           ],
           "name": "CivilDiscourse",
-          "scope": 48
+          "scope": 67
         },
         "children": [
           {
             "attributes": {
+              "canonicalName": "CivilDiscourse.AllStatements",
+              "name": "AllStatements",
+              "scope": 66,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "statements",
+                  "scope": 5,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "struct CivilDiscourse.Statement storage ref[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "struct CivilDiscourse.Statement storage ref[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Statement",
+                          "referencedDeclaration": 12,
+                          "type": "struct CivilDiscourse.Statement storage pointer"
+                        },
+                        "id": 2,
+                        "name": "UserDefinedTypeName",
+                        "src": "87:9:0"
+                      }
+                    ],
+                    "id": 3,
+                    "name": "ArrayTypeName",
+                    "src": "87:11:0"
+                  }
+                ],
+                "id": 4,
+                "name": "VariableDeclaration",
+                "src": "87:22:0"
+              }
+            ],
+            "id": 5,
+            "name": "StructDefinition",
+            "src": "56:60:0"
+          },
+          {
+            "attributes": {
               "canonicalName": "CivilDiscourse.Statement",
               "name": "Statement",
-              "scope": 47,
+              "scope": 66,
               "visibility": "public"
             },
             "children": [
@@ -139,7 +192,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "text",
-                  "scope": 6,
+                  "scope": 12,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string storage pointer",
@@ -152,20 +205,20 @@
                       "name": "string",
                       "type": "string storage pointer"
                     },
-                    "id": 2,
+                    "id": 6,
                     "name": "ElementaryTypeName",
-                    "src": "83:6:0"
+                    "src": "148:6:0"
                   }
                 ],
-                "id": 3,
+                "id": 7,
                 "name": "VariableDeclaration",
-                "src": "83:11:0"
+                "src": "148:11:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "owner",
-                  "scope": 6,
+                  "scope": 12,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address",
@@ -178,19 +231,45 @@
                       "name": "address",
                       "type": "address"
                     },
-                    "id": 4,
+                    "id": 8,
                     "name": "ElementaryTypeName",
-                    "src": "104:7:0"
+                    "src": "169:7:0"
                   }
                 ],
-                "id": 5,
+                "id": 9,
                 "name": "VariableDeclaration",
-                "src": "104:13:0"
+                "src": "169:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 10,
+                    "name": "ElementaryTypeName",
+                    "src": "192:4:0"
+                  }
+                ],
+                "id": 11,
+                "name": "VariableDeclaration",
+                "src": "192:7:0"
               }
             ],
-            "id": 6,
+            "id": 12,
             "name": "StructDefinition",
-            "src": "56:68:0"
+            "src": "121:85:0"
           },
           {
             "attributes": {
@@ -205,7 +284,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "by",
-                      "scope": 12,
+                      "scope": 18,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -218,21 +297,21 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7,
+                        "id": 13,
                         "name": "ElementaryTypeName",
-                        "src": "151:7:0"
+                        "src": "233:7:0"
                       }
                     ],
-                    "id": 8,
+                    "id": 14,
                     "name": "VariableDeclaration",
-                    "src": "151:10:0"
+                    "src": "233:10:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "text",
-                      "scope": 12,
+                      "scope": 18,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -245,63 +324,52 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 9,
+                        "id": 15,
                         "name": "ElementaryTypeName",
-                        "src": "163:6:0"
+                        "src": "245:6:0"
                       }
                     ],
-                    "id": 10,
+                    "id": 16,
                     "name": "VariableDeclaration",
-                    "src": "163:11:0"
+                    "src": "245:11:0"
                   }
                 ],
-                "id": 11,
+                "id": 17,
                 "name": "ParameterList",
-                "src": "150:25:0"
+                "src": "232:25:0"
               }
             ],
-            "id": 12,
+            "id": 18,
             "name": "EventDefinition",
-            "src": "130:46:0"
+            "src": "212:46:0"
           },
           {
             "attributes": {
               "constant": false,
-              "name": "statements",
-              "scope": 47,
+              "name": "allStatements",
+              "scope": 66,
               "stateVariable": true,
               "storageLocation": "default",
-              "type": "struct CivilDiscourse.Statement storage ref[] storage ref",
+              "type": "struct CivilDiscourse.AllStatements storage ref",
               "value": null,
-              "visibility": "public"
+              "visibility": "internal"
             },
             "children": [
               {
                 "attributes": {
-                  "length": null,
-                  "type": "struct CivilDiscourse.Statement storage ref[] storage pointer"
+                  "contractScope": null,
+                  "name": "AllStatements",
+                  "referencedDeclaration": 5,
+                  "type": "struct CivilDiscourse.AllStatements storage pointer"
                 },
-                "children": [
-                  {
-                    "attributes": {
-                      "contractScope": null,
-                      "name": "Statement",
-                      "referencedDeclaration": 6,
-                      "type": "struct CivilDiscourse.Statement storage pointer"
-                    },
-                    "id": 13,
-                    "name": "UserDefinedTypeName",
-                    "src": "182:9:0"
-                  }
-                ],
-                "id": 14,
-                "name": "ArrayTypeName",
-                "src": "182:11:0"
+                "id": 19,
+                "name": "UserDefinedTypeName",
+                "src": "264:13:0"
               }
             ],
-            "id": 15,
+            "id": 20,
             "name": "VariableDeclaration",
-            "src": "182:29:0"
+            "src": "264:27:0"
           },
           {
             "attributes": {
@@ -313,7 +381,7 @@
               ],
               "name": "AddStatement",
               "payable": false,
-              "scope": 47,
+              "scope": 66,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -325,7 +393,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "text",
-                      "scope": 37,
+                      "scope": 57,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -338,33 +406,250 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 16,
+                        "id": 21,
                         "name": "ElementaryTypeName",
-                        "src": "243:6:0"
+                        "src": "320:6:0"
                       }
                     ],
-                    "id": 17,
+                    "id": 22,
                     "name": "VariableDeclaration",
-                    "src": "243:11:0"
+                    "src": "320:11:0"
                   }
                 ],
-                "id": 18,
+                "id": 23,
                 "name": "ParameterList",
-                "src": "242:13:0"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 19,
-                "name": "ParameterList",
-                "src": "263:0:0"
+                "src": "319:13:0"
               },
               {
                 "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 57,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 24,
+                        "name": "ElementaryTypeName",
+                        "src": "349:4:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "349:4:0"
+                  }
+                ],
+                "id": 26,
+                "name": "ParameterList",
+                "src": "348:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        27
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "stmt",
+                          "scope": 57,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct CivilDiscourse.Statement memory",
+                          "typeName": null,
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [],
+                        "id": 27,
+                        "name": "VariableDeclaration",
+                        "src": "364:8:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            "owner",
+                            "text",
+                            "id"
+                          ],
+                          "type": "struct CivilDiscourse.Statement memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "type(struct CivilDiscourse.Statement storage pointer)",
+                              "value": "Statement"
+                            },
+                            "id": 28,
+                            "name": "Identifier",
+                            "src": "375:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 78,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 29,
+                                "name": "Identifier",
+                                "src": "405:3:0"
+                              }
+                            ],
+                            "id": 30,
+                            "name": "MemberAccess",
+                            "src": "405:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 22,
+                              "type": "string memory",
+                              "value": "text"
+                            },
+                            "id": 31,
+                            "name": "Identifier",
+                            "src": "434:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "statements",
+                                      "referencedDeclaration": 4,
+                                      "type": "struct CivilDiscourse.Statement storage ref[] storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 20,
+                                          "type": "struct CivilDiscourse.AllStatements storage ref",
+                                          "value": "allStatements"
+                                        },
+                                        "id": 32,
+                                        "name": "Identifier",
+                                        "src": "455:13:0"
+                                      }
+                                    ],
+                                    "id": 33,
+                                    "name": "MemberAccess",
+                                    "src": "455:24:0"
+                                  }
+                                ],
+                                "id": 34,
+                                "name": "MemberAccess",
+                                "src": "455:31:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "31",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 1",
+                                  "value": "1"
+                                },
+                                "id": 35,
+                                "name": "Literal",
+                                "src": "489:1:0"
+                              }
+                            ],
+                            "id": 36,
+                            "name": "BinaryOperation",
+                            "src": "455:35:0"
+                          }
+                        ],
+                        "id": 37,
+                        "name": "FunctionCall",
+                        "src": "375:125:0"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "VariableDeclarationStatement",
+                    "src": "364:136:0"
+                  },
                   {
                     "children": [
                       {
@@ -386,7 +671,7 @@
                             "attributes": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_struct$_Statement_$6_memory",
+                                  "typeIdentifier": "t_struct$_Statement_$12_memory_ptr",
                                   "typeString": "struct CivilDiscourse.Statement memory"
                                 }
                               ],
@@ -402,62 +687,13 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 15,
-                                  "type": "struct CivilDiscourse.Statement storage ref[] storage ref",
-                                  "value": "statements"
-                                },
-                                "id": 20,
-                                "name": "Identifier",
-                                "src": "272:10:0"
-                              }
-                            ],
-                            "id": 22,
-                            "name": "MemberAccess",
-                            "src": "272:15:0"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "isStructConstructorCall": true,
-                              "lValueRequested": false,
-                              "names": [
-                                "owner",
-                                "text"
-                              ],
-                              "type": "struct CivilDiscourse.Statement memory",
-                              "type_conversion": false
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 6,
-                                  "type": "type(struct CivilDiscourse.Statement storage pointer)",
-                                  "value": "Statement"
-                                },
-                                "id": 23,
-                                "name": "Identifier",
-                                "src": "288:9:0"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
                                   "isConstant": false,
-                                  "isLValue": false,
+                                  "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "member_name": "sender",
-                                  "referencedDeclaration": null,
-                                  "type": "address"
+                                  "member_name": "statements",
+                                  "referencedDeclaration": 4,
+                                  "type": "struct CivilDiscourse.Statement storage ref[] storage ref"
                                 },
                                 "children": [
                                   {
@@ -466,47 +702,47 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 116,
-                                      "type": "msg",
-                                      "value": "msg"
+                                      "referencedDeclaration": 20,
+                                      "type": "struct CivilDiscourse.AllStatements storage ref",
+                                      "value": "allStatements"
                                     },
-                                    "id": 24,
+                                    "id": 39,
                                     "name": "Identifier",
-                                    "src": "318:3:0"
+                                    "src": "509:13:0"
                                   }
                                 ],
-                                "id": 25,
+                                "id": 42,
                                 "name": "MemberAccess",
-                                "src": "318:10:0"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 17,
-                                  "type": "string memory",
-                                  "value": "text"
-                                },
-                                "id": 26,
-                                "name": "Identifier",
-                                "src": "347:4:0"
+                                "src": "509:24:0"
                               }
                             ],
-                            "id": 27,
-                            "name": "FunctionCall",
-                            "src": "288:73:0"
+                            "id": 43,
+                            "name": "MemberAccess",
+                            "src": "509:29:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 27,
+                              "type": "struct CivilDiscourse.Statement memory",
+                              "value": "stmt"
+                            },
+                            "id": 44,
+                            "name": "Identifier",
+                            "src": "539:4:0"
                           }
                         ],
-                        "id": 28,
+                        "id": 45,
                         "name": "FunctionCall",
-                        "src": "272:90:0"
+                        "src": "509:35:0"
                       }
                     ],
-                    "id": 29,
+                    "id": 46,
                     "name": "ExpressionStatement",
-                    "src": "272:90:0"
+                    "src": "509:35:0"
                   },
                   {
                     "children": [
@@ -540,13 +776,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 12,
+                              "referencedDeclaration": 18,
                               "type": "function (address,string memory)",
                               "value": "StatementAdded"
                             },
-                            "id": 30,
+                            "id": 47,
                             "name": "Identifier",
-                            "src": "371:14:0"
+                            "src": "553:14:0"
                           },
                           {
                             "attributes": {
@@ -566,18 +802,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 116,
+                                  "referencedDeclaration": 78,
                                   "type": "msg",
                                   "value": "msg"
                                 },
-                                "id": 31,
+                                "id": 48,
                                 "name": "Identifier",
-                                "src": "386:3:0"
+                                "src": "568:3:0"
                               }
                             ],
-                            "id": 32,
+                            "id": 49,
                             "name": "MemberAccess",
-                            "src": "386:10:0"
+                            "src": "568:10:0"
                           },
                           {
                             "attributes": {
@@ -585,33 +821,74 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 17,
+                              "referencedDeclaration": 22,
                               "type": "string memory",
                               "value": "text"
                             },
-                            "id": 33,
+                            "id": 50,
                             "name": "Identifier",
-                            "src": "398:4:0"
+                            "src": "580:4:0"
                           }
                         ],
-                        "id": 34,
+                        "id": 51,
                         "name": "FunctionCall",
-                        "src": "371:32:0"
+                        "src": "553:32:0"
                       }
                     ],
-                    "id": 35,
+                    "id": 52,
                     "name": "ExpressionStatement",
-                    "src": "371:32:0"
+                    "src": "553:32:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 26
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "id",
+                          "referencedDeclaration": 11,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 27,
+                              "type": "struct CivilDiscourse.Statement memory",
+                              "value": "stmt"
+                            },
+                            "id": 53,
+                            "name": "Identifier",
+                            "src": "601:4:0"
+                          }
+                        ],
+                        "id": 54,
+                        "name": "MemberAccess",
+                        "src": "601:7:0"
+                      }
+                    ],
+                    "id": 55,
+                    "name": "Return",
+                    "src": "594:14:0"
                   }
                 ],
-                "id": 36,
+                "id": 56,
                 "name": "Block",
-                "src": "263:147:0"
+                "src": "354:261:0"
               }
             ],
-            "id": 37,
+            "id": 57,
             "name": "FunctionDefinition",
-            "src": "221:189:0"
+            "src": "298:317:0"
           },
           {
             "attributes": {
@@ -623,7 +900,7 @@
               ],
               "name": "GetStatements",
               "payable": false,
-              "scope": 47,
+              "scope": 66,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -636,9 +913,9 @@
                   ]
                 },
                 "children": [],
-                "id": 38,
+                "id": 58,
                 "name": "ParameterList",
-                "src": "438:2:0"
+                "src": "643:2:0"
               },
               {
                 "children": [
@@ -646,51 +923,40 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 46,
+                      "scope": 65,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "struct CivilDiscourse.Statement memory[] memory",
+                      "type": "struct CivilDiscourse.AllStatements memory",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "length": null,
-                          "type": "struct CivilDiscourse.Statement storage ref[] storage pointer"
+                          "contractScope": null,
+                          "name": "AllStatements",
+                          "referencedDeclaration": 5,
+                          "type": "struct CivilDiscourse.AllStatements storage pointer"
                         },
-                        "children": [
-                          {
-                            "attributes": {
-                              "contractScope": null,
-                              "name": "Statement",
-                              "referencedDeclaration": 6,
-                              "type": "struct CivilDiscourse.Statement storage pointer"
-                            },
-                            "id": 39,
-                            "name": "UserDefinedTypeName",
-                            "src": "462:9:0"
-                          }
-                        ],
-                        "id": 40,
-                        "name": "ArrayTypeName",
-                        "src": "462:11:0"
+                        "id": 59,
+                        "name": "UserDefinedTypeName",
+                        "src": "667:13:0"
                       }
                     ],
-                    "id": 41,
+                    "id": 60,
                     "name": "VariableDeclaration",
-                    "src": "462:11:0"
+                    "src": "667:13:0"
                   }
                 ],
-                "id": 42,
+                "id": 61,
                 "name": "ParameterList",
-                "src": "461:13:0"
+                "src": "666:15:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 42
+                      "functionReturnParameters": 61
                     },
                     "children": [
                       {
@@ -699,38 +965,38 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 15,
-                          "type": "struct CivilDiscourse.Statement storage ref[] storage ref",
-                          "value": "statements"
+                          "referencedDeclaration": 20,
+                          "type": "struct CivilDiscourse.AllStatements storage ref",
+                          "value": "allStatements"
                         },
-                        "id": 43,
+                        "id": 62,
                         "name": "Identifier",
-                        "src": "492:10:0"
+                        "src": "699:13:0"
                       }
                     ],
-                    "id": 44,
+                    "id": 63,
                     "name": "Return",
-                    "src": "485:17:0"
+                    "src": "692:20:0"
                   }
                 ],
-                "id": 45,
+                "id": 64,
                 "name": "Block",
-                "src": "475:34:0"
+                "src": "682:37:0"
               }
             ],
-            "id": 46,
+            "id": 65,
             "name": "FunctionDefinition",
-            "src": "416:93:0"
+            "src": "621:98:0"
           }
         ],
-        "id": 47,
+        "id": 66,
         "name": "ContractDefinition",
-        "src": "26:485:0"
+        "src": "26:696:0"
       }
     ],
-    "id": 48,
+    "id": 67,
     "name": "SourceUnit",
-    "src": "0:513:0"
+    "src": "0:724:0"
   },
   "compiler": {
     "name": "solc",
@@ -744,5 +1010,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-17T22:12:15.260Z"
+  "updatedAt": "2018-02-17T23:22:31.097Z"
 }
