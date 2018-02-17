@@ -10,6 +10,8 @@ import Contract from './helpers/Contract';
 
 Contract.getStatements();
 
+console.log(Contract.getStatements());
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
