@@ -5,6 +5,10 @@ import Vuex from 'vuex';
 import store from './store/store';
 import App from './App';
 import router from './router';
+import Contract from './helpers/Contract';
+
+
+Contract.getStatements();
 
 Vue.config.productionTip = false
 
